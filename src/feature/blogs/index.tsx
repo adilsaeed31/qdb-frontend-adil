@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Card, List } from 'antd'
+import { StarOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
 
 const DetailWrapper = styled.div`
@@ -32,7 +33,7 @@ const Blogs: React.FC = () => {
 
   return (
     <DetailWrapper>
-      <h2>Posts</h2>
+      <h1>All Blog Posts</h1>
       {posts.length > 0 ? (
         <List
           dataSource={posts}

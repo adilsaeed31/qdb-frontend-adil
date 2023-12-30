@@ -6,31 +6,46 @@ import styled from 'styled-components'
 import { Sidebar } from './components'
 import { Dashboard, Blogs, PostDetail, Profile } from './feature'
 
-const { Content } = Layout
+const { Content, Header } = Layout
 
-const AppWrapper = styled.div`
-  display: flex;
+const AppLayout = styled(Layout)`
+  min-height: 100vh;
+`
+
+const AppContentLayout = styled(Layout)`
+  margin-left: 200px;
+  width: 100%;
+`
+
+const AppHeader = styled(Header)`
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+`
+
+const AppContent = styled(Content)`
+  margin-top: 30px;
 `
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh' }}>
+      <AppLayout>
         <Sidebar />
 
-        <Layout>
-          <Content>
-            <AppWrapper>
-              <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path={`profile/:userId`} element={<Profile />} />
-                <Route path={`blogs/:userId`} element={<Blogs />} />
-                <Route path="/post/:postId" element={<PostDetail />} />
-              </Routes>
-            </AppWrapper>
-          </Content>
-        </Layout>
-      </Layout>
+        <AppContentLayout>
+          <AppHeader />
+
+          <AppContent>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path={`profile/:userId`} element={<Profile />} />
+              <Route path={`blogs/:userId`} element={<Blogs />} />
+              <Route path="/post/:postId" element={<PostDetail />} />
+            </Routes>
+          </AppContent>
+        </AppContentLayout>
+      </AppLayout>
     </Router>
   )
 }
