@@ -8,7 +8,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Unfortunately, I didn't have enough time to replicate the UI exactly as shown in the test documentation image. My primary emphasis was on ensuring the functionality.
 
-### In Order to execute the unit test, please execute the below test command and press a to run the test.
+### To execute the unit test, please execute the below test command and press a to run the test.
+
+### Project Information
+
+in the `src/` folder you will find the folders below mentioned
+
+`assets` Holding images
+
+`components` Holding React Components
+
+`feature` Contains all the features with business logic
+
+`hooks` Defined custom hooks for user and post API calls
+
+`__test__` Unit Testing file
 
 ## Available Scripts
 
