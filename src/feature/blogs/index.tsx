@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Card, List } from 'antd'
-import { StarOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
 
 const DetailWrapper = styled.div`
@@ -40,6 +39,11 @@ const Blogs: React.FC = () => {
           renderItem={(post) => (
             <List.Item>
               <Card title={post.title}>
+                <img
+                  height="100"
+                  src="https://picsum.photos/500/300"
+                  alt={post.title}
+                />
                 <p>{post.body}</p>
                 <Link to={`/post/${post.id}`}>View Post</Link>
               </Card>

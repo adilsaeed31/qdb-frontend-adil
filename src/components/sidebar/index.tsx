@@ -5,7 +5,7 @@ import {
   ReadOutlined,
   UserOutlined,
 } from '@ant-design/icons'
-import { Layout, Menu, Avatar } from 'antd'
+import { Layout, Menu } from 'antd'
 import styled from 'styled-components'
 
 import Logo from '../../assets/images/logo.png'
